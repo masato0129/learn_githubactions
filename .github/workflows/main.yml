@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: learn githubactions
       id: hello
-      uses: techmasat/uwr_arduino:latest
+      uses: docker://techmasat/uwr_arduino:latest
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
