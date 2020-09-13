@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: learn githubactions
       id: hello
-      uses: actions/learn_githubactions@v1
+      uses: actions/checkout@v1
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
