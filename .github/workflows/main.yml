@@ -7,9 +7,9 @@ jobs:
     steps:
     - name: learn githubactions
       id: hello
-      uses: docker://techmasat/uwr_arduino:latest
-      with:
-        who-to-greet: 'Mona the Octocat'
+      uses: actions/checkout@v2
     # Use the output from the `hello` step
     - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+      run: |
+          docker build . --file Dockerfile --target test -t techmasat:uwr_arduino
+          docker container run techmasat:uwr_arduino
