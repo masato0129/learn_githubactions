@@ -8,6 +8,6 @@ inputs:
     required: true
 runs:
   using: "Docker"
-  image: "techmasat/uwr_arduino"
+  image: "techmasat/uwr_arduino_ubuntu"
   args:
     - ${{inputs.run-command}}
