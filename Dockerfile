@@ -8,10 +8,13 @@ RUN apt-get update
 RUN apt-get install -y python3 \
             python3-distutils \
             curl
+RUN apt-get update
+RUN apt-get install -y git
 
 RUN python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)" 
-ENV PATH $PATH:~/.platformio/penv/bin
+ENV PATH $PATH:/root/.platformio/penv/bin
 RUN echo $PATH
+pio lib install "arduino-libraries/Servo"
 
 # アクションのリポジトリからコードファイルをファイルシステムパスへコピー
 # `/` of the container
