@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: test build
       uses: actions/checkout@v2
-    - name: build
+    - name: test build
       uses: ./.github/actions/arduino
       with:
         run-command: ".ci/build.sh"
