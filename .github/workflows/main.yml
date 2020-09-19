@@ -8,8 +8,8 @@ jobs:
     name: build
     steps:
     - name: build
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
     - name: build
       uses: ./.github/actions/arduino
       with:
-        run-command: "hoge"
+        run-command: ".ci/build.sh"
