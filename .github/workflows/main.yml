@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     name: build
     steps:
-    - name: build
-      uses: actions/checkout@v1
+    - name: check out
+      uses: actions/checkout@v2
     - name: build
       uses: ./.github/actions/arduino
       with:
