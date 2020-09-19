@@ -14,7 +14,7 @@ RUN apt-get install -y git
 RUN python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)" 
 ENV PATH $PATH:/root/.platformio/penv/bin
 RUN echo $PATH
-pio lib install "arduino-libraries/Servo"
+RUN pio lib --global install "arduino-libraries/Servo"
 
 # アクションのリポジトリからコードファイルをファイルシステムパスへコピー
 # `/` of the container
