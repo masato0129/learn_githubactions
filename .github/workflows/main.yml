@@ -1,15 +1,15 @@
+name: build
+
 on: [push]
 
 jobs:
-  learn_githubactions_job:
+  build:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: build
     steps:
-    - name: learn githubactions
-      id: hello
+    - name: test build
       uses: actions/checkout@v2
+    - name: Debug
+      uses: ./.github/actions/arduino
       with:
-        who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run-command: ".ci/build.sh"
