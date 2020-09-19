@@ -12,4 +12,4 @@ jobs:
     - name: build
       uses: ./.github/actions/arduino
       with:
-        run-command: ".ci/build.sh"
+        run-command: "hoge"
