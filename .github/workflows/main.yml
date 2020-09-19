@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     name: build
     steps:
-    - name: test build
+    - name: build
       uses: actions/checkout@v2
-    - name: test build
+    - name: build
       uses: ./.github/actions/arduino
       with:
         run-command: ".ci/build.sh"
