@@ -15,10 +15,3 @@ RUN python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platfo
 ENV PATH $PATH:/root/.platformio/penv/bin
 RUN echo $PATH
 RUN pio lib --global install "arduino-libraries/Servo"
-
-# アクションのリポジトリからコードファイルをファイルシステムパスへコピー
-# `/` of the container
-# COPY entrypoint.sh /entrypoint.sh
-
-# dockerコンテナが起動する際に実行されるコードファイル (`entrypoint.sh`)
-# ENTRYPOINT ["/entrypoint.sh"]
