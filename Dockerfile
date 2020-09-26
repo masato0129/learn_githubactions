@@ -12,3 +12,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
             && rm -rf /var/lib/apt/lists/*
 
 RUN python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)" 
+
+ENV PATH $PATH:/root/.platformio/penv/bin
+RUN echo $PATH
